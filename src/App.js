@@ -10,23 +10,27 @@ import AllMemes from "./components/AllMemes";
 import Header from "./components/Header";
 import Menus from './components/Menus';
 
+
+
 function App() {
   return (
-    <div>
+    <div style={{"background-color":"dark"}}>
         <Router>
         <Header/>
-        <Container>
-
+        
         <Row>
           <Col md={4}>
               <Menus/>
+              <br>
+              </br>
+
           </Col>
           <Col md={8}>
               <Route path="/" component={AllMemes} exact/>
               <Route path="/add-memes" component={AddMemes} exact/>
           </Col>
         </Row>
-        </Container>
+        
         </Router>
       
     </div>

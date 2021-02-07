@@ -5,13 +5,14 @@ import axios from "axios";
 import base_url from "../api/base_url";
 import {toast,ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useHistory } from 'react-router-dom';
 
 toast.configure();
 const AddMemes=()=>{
-
+    const history = useHistory();
     const [meme,setMemes] =  useState({});
     useEffect(()=>{
-        toast("Add your memes here");
+        toast.info("Add your memes here");
         document.title="Add Memes";
         
     },[])
@@ -28,19 +29,31 @@ const AddMemes=()=>{
                 console.log(`${data}`)
                 console.log(response);
                 toast("posted successfully");
+                redirect();
             },
             (error)=>{
                 console.log(error);
-                toast.error("Error occured");
+                toast.error("Sorry this Meme is already posted!");
             }
         )
     }
+    const redirect=()=>{
+        history.push("/");
+    }
+    const resetForm = () => {
+        setMemes({
+            ...meme,
+            name: '',
+            caption: '',
+            imageaddress: ' '
+        })
+     }
     <ToastContainer />
     return <Fragment>
         <h1 className="text-center my-3"> Want to Post your Meme?</h1>
-        <Form onSubmit={handleForm}>
+        <Form>
             <FormGroup >
-                <label for = "name" className="mx-3">Name</label>
+                <label for = "name">Name</label>
                 <Input 
                     type="text" 
                     placeholder="Enter your Name here" 
@@ -52,7 +65,7 @@ const AddMemes=()=>{
                     />
             </FormGroup>
             <FormGroup>
-                <label className="mx-3">Enter Caption</label>
+                <label >Enter Caption</label>
                 <Input 
                 type="text" 
                 placeholder="Enter your caption here" 
@@ -64,7 +77,7 @@ const AddMemes=()=>{
                 />
             </FormGroup>
             <FormGroup>
-                <label className="mx-3">Url of your meme</label>
+                <label>Url of your meme</label>
                 <Input 
                 type="url" 
                 placeholder="Enter url of meme here" 
@@ -76,8 +89,8 @@ const AddMemes=()=>{
                 />
             </FormGroup>
             <Container className="text-center">
-                <Button type = "submit" color="success">Add Meme</Button>
-                <Button color="warning" className="ml-2">Clear</Button>
+                <Button type = "submit" color="success" onClick={handleForm} >Add Meme</Button>
+                <Button reset color="warning" className="ml-2"  >Clear</Button>
             </Container>
         </Form>
     </Fragment>

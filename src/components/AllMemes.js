@@ -11,7 +11,6 @@ const AllMemes=()=>{
 
     useEffect(()=>{
         document.title="All Memes";
-        toast("These are all memes for you!!");
         getAllMemes();
     },[])
 
@@ -22,12 +21,12 @@ const AllMemes=()=>{
     const getAllMemes=()=>{
         axios.get(`${base_url}/memes`).then(
             (response)=>{
-                //toast.success("course loaded");
+                toast.success("Memes loaded..Enjoy!!");
                 console.log(response);
                 setMemes(response.data);
             },
             (error)=>{
-                //toast.error("Error fetching response");
+                toast.error("Error fetching response, Please sit back we are looking into it :)");
                 console.log(error);
             }
         )
@@ -36,11 +35,13 @@ const AllMemes=()=>{
     
     <ToastContainer/>
     return(
-        <div>
-            <h1> These are the Memes for you!</h1>
+        <div className="text-center">
+            <h1 style={{color:"green"}}> These are the Memes for you!</h1>
+            <br>
+            </br>
             {
                 memes.length>0? memes.map((item)=>
-                    <Memes key = {item.id} meme={item} />):"No Memes"
+                    <Memes key = {item.id} meme={item} />):"No Memes  :("
             }
         </div>
     )

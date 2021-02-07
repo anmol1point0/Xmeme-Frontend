@@ -4,7 +4,7 @@ import { ListGroup } from "reactstrap"
 
 const Menus=()=>{
     return(
-        <ListGroup>
+        <ListGroup style={{"margin-left":"20px"}}>
             <Link className="list-group-item list-group-item-action mx-1" tag="a" to="/">
                 All Memes
             </Link>
