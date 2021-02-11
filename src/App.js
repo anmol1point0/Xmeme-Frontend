@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import { Col, Container, Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
 import './App.css';
 import AddMemes from './components/AddMemes';
 import AllMemes from "./components/AllMemes";
