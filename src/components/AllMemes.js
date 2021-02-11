@@ -12,6 +12,7 @@ const AllMemes=()=>{
     useEffect(()=>{
         document.title="All Memes";
         getAllMemes();
+        window.scrollTo(0, 0)
     },[])
 
     const[memes,setMemes]=useState([
@@ -35,13 +36,15 @@ const AllMemes=()=>{
     
     <ToastContainer/>
     return(
-        <div className="text-center">
+
+        <div className="text-center" style={{"margin-top":"147px"}}>
+            
             <h1 style={{color:"green"}}> These are the Memes for you!</h1>
             <br>
             </br>
             {
                 memes.length>0? memes.map((item)=>
-                    <Memes key = {item.id} meme={item} />):"No Memes  :("
+                    <Memes key = {item.id} meme={item} />):"Memes Loading..."
             }
         </div>
     )
