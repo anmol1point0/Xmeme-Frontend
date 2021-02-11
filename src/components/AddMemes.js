@@ -40,18 +40,11 @@ const AddMemes=()=>{
     const redirect=()=>{
         history.push("/");
     }
-    const resetForm = () => {
-        setMemes({
-            ...meme,
-            name: '',
-            caption: '',
-            imageaddress: ' '
-        })
-     }
+    
     <ToastContainer />
     return <Fragment>
         <h1 className="text-center my-3"> Want to Post your Meme?</h1>
-        <Form>
+        <Form onReset>
             <FormGroup >
                 <label for = "name">Name</label>
                 <Input 
@@ -90,7 +83,7 @@ const AddMemes=()=>{
             </FormGroup>
             <Container className="text-center">
                 <Button type = "submit" color="success" onClick={handleForm} >Add Meme</Button>
-                <Button reset color="warning" className="ml-2"  >Clear</Button>
+                <Button type="reset" color="warning" className="ml-2"  >Clear</Button>
             </Container>
         </Form>
     </Fragment>

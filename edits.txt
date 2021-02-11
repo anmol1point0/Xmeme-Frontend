@@ -1,0 +1,4 @@
+1. scrollable menus in the left pane as i scroll
+2. Update api
+3. change the bg to something more eye catchy
+4. Deploy

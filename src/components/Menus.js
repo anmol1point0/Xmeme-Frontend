@@ -4,11 +4,11 @@ import { ListGroup } from "reactstrap"
 
 const Menus=()=>{
     return(
-        <ListGroup style={{"margin-left":"20px"}}>
-            <Link className="list-group-item list-group-item-action mx-1" tag="a" to="/">
+        <ListGroup className = "my-500" style={{"margin-left":"20px"}}>
+            <Link style={{border: '1px solid black',"background":"red" ,"color":"black"}} className="list-group-item list-group-item-action mx-1" tag="a" to="/">
                 All Memes
             </Link>
-            <Link className="list-group-item list-group-item-action mx-1" tag="a" to="/add-memes">
+            <Link style={{border: '1px solid black',"color":"black","background":"#DDE0DF"}} className="list-group-item list-group-item-action mx-1 my-2" tag="a" to="/add-memes">
                 Add My Meme
             </Link>
 

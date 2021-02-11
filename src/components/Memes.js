@@ -9,7 +9,7 @@ const Memes=({meme})=>{
 
     return(
         
-        <Card className="text-center my-2" style={{backgroundColor:'powderblue'}}>
+        <Card className="text-center my-2" style={{border: '1px solid black',backgroundColor:'powderblue',width:"13", Height:"10"}}>
             
                 <CardTitle style={{ fontSize: 25, textAlign: "left"}}>
                     <i style={{fontWeight: 'bold'}}>Name</i>: {meme.name}

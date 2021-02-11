@@ -20,9 +20,9 @@ function App() {
         
         <Row>
           <Col md={4}>
-              <Menus/>
               <br>
               </br>
+              <Menus/>
 
           </Col>
           <Col md={8}>
