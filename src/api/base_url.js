@@ -1,2 +1,2 @@
-const base_url="http://localhost:8081";
+const base_url="https://meme-ster.herokuapp.com";
 export default base_url;
