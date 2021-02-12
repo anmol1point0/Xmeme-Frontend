@@ -10,7 +10,6 @@ import Header from "./components/Header";
 import Menus from './components/Menus';
 import FindMeme from "./components/FindMeme"
 
-
 function App() {
   return (
     <div style={{"background-color":"dark"}}>
@@ -21,6 +20,7 @@ function App() {
           <Col md={4}>
               <br>
               </br>
+              
               <Menus/>
 
           </Col>
