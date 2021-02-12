@@ -46,7 +46,7 @@ const AddMemes=()=>{
         <h1  className="text-center" style={{"margin-top":"15%"}}> Want to Post your Meme?</h1>
         <Form onReset>
             <FormGroup >
-                <label for = "name">Name</label>
+                <label style= { {fontWeight: 'bold'}} for = "name">Name</label>
                 <Input 
                     type="text" 
                     placeholder="Enter your Name here" 
@@ -58,7 +58,7 @@ const AddMemes=()=>{
                     />
             </FormGroup>
             <FormGroup>
-                <label >Enter Caption</label>
+                <label style= { {fontWeight: 'bold'}}>Enter Caption</label>
                 <Input 
                 type="text" 
                 placeholder="Enter your caption here" 
@@ -70,7 +70,7 @@ const AddMemes=()=>{
                 />
             </FormGroup>
             <FormGroup>
-                <label>Url of your meme</label>
+                <label style= { {fontWeight: 'bold'}}>Url of your meme</label>
                 <Input 
                 type="url" 
                 placeholder="Enter url of meme here" 

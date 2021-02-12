@@ -40,6 +40,7 @@ const FindMeme=()=>{
 
             },(error)=>{
                 console.log(error);
+                toast.error("No Meme exist with this ID :(")
             }
         )
         //otherTemp = <div><p>Hello</p></div>;
@@ -52,7 +53,7 @@ const FindMeme=()=>{
         <h1  className="text-center" style={{"margin-top":"18%"}}> Want to find the meme?</h1>
         <Form>
             <FormGroup >
-                <label for = "id">ID</label>
+                <label style= { {fontWeight: 'bold'}} for = "id">ID</label>
                 <Input 
                     type="text" 
                     placeholder="Enter the ID" 
