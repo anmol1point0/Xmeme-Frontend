@@ -22,6 +22,7 @@ const AllMemes=()=>{
     const getAllMemes=()=>{
         axios.get(`${base_url}/memes`).then(
             (response)=>{
+                response.data.slice(0,1);
                 toast.success("Memes loaded..Enjoy!!");
                 console.log(response);
                 setMemes(response.data);
@@ -43,7 +44,7 @@ const AllMemes=()=>{
             <br>
             </br>
             {
-                memes.length>0? memes.map((item)=>
+                memes.length>0? memes.slice(0,100).map((item)=>
                     <Memes key = {item.id} meme={item} />):"Memes Loading..."
             }
         </div>
