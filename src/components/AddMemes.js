@@ -43,7 +43,7 @@ const AddMemes=()=>{
     
     <ToastContainer />
     return <Fragment>
-        <h1  className="text-center" style={{"margin-top":"25%"}}> Want to Post your Meme?</h1>
+        <h1  className="text-center" style={{"margin-top":"15%"}}> Want to Post your Meme?</h1>
         <Form onReset>
             <FormGroup >
                 <label for = "name">Name</label>

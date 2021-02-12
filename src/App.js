@@ -1,4 +1,3 @@
-
 import {
   BrowserRouter as Router,
   Route
@@ -9,7 +8,7 @@ import AddMemes from './components/AddMemes';
 import AllMemes from "./components/AllMemes";
 import Header from "./components/Header";
 import Menus from './components/Menus';
-
+import FindMeme from "./components/FindMeme"
 
 
 function App() {
@@ -28,6 +27,7 @@ function App() {
           <Col md={8}>
               <Route path="/" component={AllMemes} exact/>
               <Route path="/add-memes" component={AddMemes} exact/>
+              <Route path="/find-meme" component={FindMeme} exact/>
           </Col>
         </Row>
         
