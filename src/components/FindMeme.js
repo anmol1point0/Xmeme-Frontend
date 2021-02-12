@@ -29,7 +29,6 @@ const FindMeme=()=>{
     const FindMeme=(id)=>{
         console.log("id iaadfds s "+ id.id);
         console.log(`${base_url}/memes/`+id.id);
-        var temp = document.getElementById("FormResult");
         var otherTemp;
         axios.get(`${base_url}/memes/`+id.id).then(
             (response)=>{
