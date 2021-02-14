@@ -1,2 +1,2 @@
-const base_url="https://localhost:8081";
+const base_url="http://localhost:8081";
 export default base_url;
